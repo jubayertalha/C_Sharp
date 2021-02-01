@@ -10,13 +10,29 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            int i;
+            /*int i;
             string name = "Talha";
 
             for (i = 0; i < 10; i++) 
                 if(i%2==1)
-                    Console.WriteLine("Hello "+name+" "+i);
+                    Console.WriteLine("Hello {0} {1}!",name,i);*/
 
+            int x, y;
+
+            try
+            {
+                Console.Write("Enter x: ");
+                x = Convert.ToInt16(Console.ReadLine());
+                Console.Write("Enter y: ");
+                y = Convert.ToInt16(Console.ReadLine());
+
+                Console.WriteLine("\nAddition is {0}\nSubtraction is {1}\nMultiplication is {2}\nDivision is {3}", (x + y), (x - y), (x * y), (x / y));
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            
             Console.ReadLine();
         }
     }
