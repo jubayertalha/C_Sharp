@@ -15,7 +15,7 @@ namespace ConsoleApplication1
 
             for (i = 0; i < 10; i++) 
                 if(i%2==1)
-                    Console.WriteLine("Hello {0} {1}!",name,i);*/
+                    Console.WriteLine("Hello {0} {1}!",name,i);
 
             int x, y;
 
@@ -31,7 +31,24 @@ namespace ConsoleApplication1
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+            }*/
+
+
+            int i;
+            int b = 32, a = 40;
+            for (i = 1; i <= 9; i++)
+            {
+                if ((a / b * 2) == 2)
+                {
+                    Console.WriteLine(i + " ");
+                    continue;
+                }
+                else if (i != 4)
+                    Console.Write(i + " ");
+                else
+                    break;
             }
+
             
             Console.ReadLine();
         }
