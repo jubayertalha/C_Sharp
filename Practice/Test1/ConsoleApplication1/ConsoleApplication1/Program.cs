@@ -10,7 +10,7 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            /*int i;
+            int i;
             string name = "Talha";
 
             for (i = 0; i < 10; i++) 
@@ -31,26 +31,17 @@ namespace ConsoleApplication1
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-            }*/
-
-
-            int i;
-            int b = 32, a = 40;
-            for (i = 1; i <= 9; i++)
-            {
-                if ((a / b * 2) == 2)
-                {
-                    Console.WriteLine(i + " ");
-                    continue;
-                }
-                else if (i != 4)
-                    Console.Write(i + " ");
-                else
-                    break;
             }
+           
+
+            C c = new C();
+            B b = new B();
+            A a = new A();
 
             
+
             Console.ReadLine();
         }
+
     }
 }
