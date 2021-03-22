@@ -10,28 +10,21 @@ namespace BankAccount
     {
         static void Main(string[] args)
         {
+            Account a1 = new Account("Talha Jubayer","145",50000);
+            Account a2 = new Account("Jubayer Talha","146", 50000);
 
-            /*a1.ShowInfo();
-            a2.ShowInfo();
-            a1.Withdraw(500);
-            a1.Transfer(a2, 10000);
-            Console.WriteLine("*********************");
+            a1.Withdraw(20000);
+            a1.Deposit(10000);
+            a1.Transfer(a2, 30000);
+            a2.Transfer(a1, 15000);
+
+            Console.WriteLine("\n******************************\n");
             a1.ShowInfo();
-            a2.ShowInfo();*/
+            Console.WriteLine("******************************\n");
+            a2.ShowInfo();
 
-            Account a1 = new SavingsAccount("Tanvir Ahmed","145",50000);
-            Account a2 = new CurrentAccount("Tanvir Ahmed","146", 50000);
-            Account a3 = new SavingsAccount("Tanvir Ahmed Sabbir Ahmed", "147", 5000);
-            Account a4 = new FixedAccount("Tanvir Ahmed", "148", 100000, 5, 2014);
-
-            Customer c = new Customer();
-            c.AddAccount(a1,a2,a3,a4);
-            var acc = c.GetAccount("146");
-            acc.Withdraw(49600);
-            //c.ShowAccDetails();
-            
-
-
+            Console.Write("End");
+            Console.ReadLine();
         }
     }
 }
