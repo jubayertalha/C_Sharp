@@ -36,6 +36,7 @@ namespace StudentInfo
 
         public void PrintStudent()
         {
+            Console.WriteLine("\nAll Students Info of Department {0}: \n", name);
             foreach (Student s in students)
                 if (s != null)
                     s.ShowInfo();
