@@ -8,40 +8,36 @@ namespace ConsoleApplication1
 {
     class Program
     {
+         public delegate void Calc(int x, int y);
+
+        public static void Add(int a, int c) {
+            Console.Write("Sum: " + (a + c));
+        }
+        public static void Sub(int a, int c) {
+            Console.Write("Sub: " + (a - c));
+    }
+         public static void Multiply(int x, int y)
+{
+            Console.Write("Multiply: " + (x * y));
+         }
+        public static void Div(int x, int y)
+        {
+            Console.Write("Division: " + (x / y));
+        }
         static void Main(string[] args)
         {
-            int i;
-            string name = "Talha";
+               Calc adder = Multiply;
+               adder(3,4);
+               adder -= Multiply;
+               adder += Sub;
+               adder   += Add;
+               adder    -= Add;
+               adder += Multiply;
+               adder(4,5);
+               Console.ReadLine();
 
-            for (i = 0; i < 10; i++) 
-                if(i%2==1)
-                    Console.WriteLine("Hello {0} {1}!",name,i);
-
-            int x, y;
-
-            try
-            {
-                Console.Write("Enter x: ");
-                x = Convert.ToInt16(Console.ReadLine());
-                Console.Write("Enter y: ");
-                y = Convert.ToInt16(Console.ReadLine());
-
-                Console.WriteLine("\nAddition is {0}\nSubtraction is {1}\nMultiplication is {2}\nDivision is {3}", (x + y), (x - y), (x * y), (x / y));
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-           
-
-            C c = new C();
-            B b = new B();
-            A a = new A();
-
-            
-
-            Console.ReadLine();
         }
+    }
 
     }
-}
+
